@@ -12,7 +12,7 @@ namespace Content.API.Models
 		// external Id, easier to reference
 		public string Id { get; set; }
 
-		public int CatalogId { get; set; }
+		public ulong CatalogId { get; set; }
 
 		public string Title { get; set; }
 

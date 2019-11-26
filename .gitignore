@@ -15,3 +15,7 @@
 /KCommerce/Services/Search/Search.API/obj
 /KCommerce/Services/Search/Search.API/bin
 /KCommerce/.vs
+/KCommerce/Services/Shared/Shared.DataLayer/obj
+/KCommerce/Services/Shared/Shared.DataLayer/bin
+/KCommerce/Services/Catalog/Catalog.DataLayer/obj
+/KCommerce/Services/Catalog/Catalog.DataLayer/bin
