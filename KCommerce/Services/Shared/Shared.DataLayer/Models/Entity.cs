@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.Serialization;
 
 namespace Shared.DataLayer.Models
 {
@@ -17,6 +18,7 @@ namespace Shared.DataLayer.Models
 		private List<INotification> _domainEvents;
 
 		[NotMapped]
+		[IgnoreDataMember]
 		public IReadOnlyCollection<INotification> DomainEvents => _domainEvents?.AsReadOnly();
 
 		public void AddDomainEvent(INotification eventItem)

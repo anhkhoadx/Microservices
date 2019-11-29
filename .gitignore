@@ -19,3 +19,7 @@
 /KCommerce/Services/Shared/Shared.DataLayer/bin
 /KCommerce/Services/Catalog/Catalog.DataLayer/obj
 /KCommerce/Services/Catalog/Catalog.DataLayer/bin
+/KCommerce/Services/Order/Ordering.DataLayer/obj
+/KCommerce/Services/Order/Ordering.DataLayer/bin
+/KCommerce/Services/Chat/Chat.DataLayer/obj
+/KCommerce/Services/Chat/Chat.DataLayer/bin

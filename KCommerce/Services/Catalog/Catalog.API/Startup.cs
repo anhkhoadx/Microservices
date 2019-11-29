@@ -1,4 +1,5 @@
 using Catalog.DataLayer.DataAccess;
+using Catalog.DataLayer.DataAccess.Marten;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,6 +27,7 @@ namespace Catalog.API
 			services.AddControllers();
 
 			var connection = Configuration.GetConnectionString("DefaultConnection");
+			services.AddMarten(connection);
 			services.AddDbContext<CatalogContext>(options =>
 				options.UseNpgsql(connection).EnableSensitiveDataLogging());
 			services.AddSingleton(provider => Configuration);

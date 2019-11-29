@@ -5,11 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DatabaseModels\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="FluentValidation" Version="8.5.1" />
+    <PackageReference Include="Marten" Version="3.10.0" />
     <PackageReference Include="MediatR" Version="7.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.1">
@@ -26,6 +23,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\Shared.DataLayer\Shared.DataLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DataAccess\Marten\" />
   </ItemGroup>
 
 </Project>
