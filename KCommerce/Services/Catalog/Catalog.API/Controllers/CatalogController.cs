@@ -231,7 +231,7 @@ namespace Catalog.API.Controllers
 			var orderConfirmed = new OrderConfirmed { OrderId = orderId };
 			var orderShipped = new OrderShipped { OrderId = orderId };
 			var orderCompleted = new OrderCompleted { OrderId = orderId };
-			session.Events.Append(streamId, catalogRemoved, orderChangeStatus, orderConfirmed, orderShipped, orderCompleted);
+			session.Events.Append(streamId, orderCreated, catalogRemoved, orderChangeStatus, orderConfirmed, orderShipped, orderCompleted);
 			session.SaveChanges();
 		}
 	}
