@@ -1,0 +1,22 @@
+{
+	"ReRoutes": [
+		{
+			"DownstreamPathTemplate": "/api/catalog/{anything}",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 44341
+				}
+			],
+			"UpstreamPathTemplate": "/api/gateway/catalog/{anything}",
+			"UpstreamHttpMethod": [ "Get", "Post" ]
+		}
+	],
+	"GlobalConfiguration": {
+		"BaseUrl": "http://localhost:44340"
+	}
+}
+
+
+

@@ -23,3 +23,5 @@
 /KCommerce/Services/Order/Ordering.DataLayer/bin
 /KCommerce/Services/Chat/Chat.DataLayer/obj
 /KCommerce/Services/Chat/Chat.DataLayer/bin
+/KCommerce/ApiGateways/Web/Gateway.Web/bin
+/KCommerce/ApiGateways/Web/Gateway.Web/obj
