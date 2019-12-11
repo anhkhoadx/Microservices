@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Shared.DataLayer.Attributes;
+using Shared.DataLayer.ServiceDiscovery;
 
 namespace Catalog.API
 {
@@ -34,8 +35,8 @@ namespace Catalog.API
 			services.AddScoped<ICatalogRepository, CatalogRepository>();
 			services.AddMediatR(typeof(Startup));
 			services.AddMvc(options => options.Filters.Add(typeof(ValidationFilterAttribute)));
+			services.AddConsulConfig(Configuration);
 		}
-		
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -55,6 +56,8 @@ namespace Catalog.API
             {
                 endpoints.MapControllers();
             });
-        }
-    }
+
+			app.UseConsul(Configuration);
+		}
+	}
 }

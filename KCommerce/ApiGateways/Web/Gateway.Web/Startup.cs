@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Ocelot.Provider.Consul;
 
 namespace Gateway.Web
 {
@@ -21,7 +22,7 @@ namespace Gateway.Web
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddControllers();
-			services.AddOcelot();
+			services.AddOcelot().AddConsul();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
